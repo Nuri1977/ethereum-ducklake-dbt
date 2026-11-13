@@ -1,0 +1,8 @@
+ethereum_lake:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: /Users/Shared/academy/learner/projects/ethereum_lake_dev.duckdb
+      schema: main
+      threads: 4
