@@ -3,6 +3,10 @@ ethereum_lake:
   outputs:
     dev:
       type: duckdb
-      path: /Users/Shared/academy/learner/projects/ethereum_lake_dev.duckdb
+      path: lake/dbt_session.duckdb
+      attach:
+        - path: "ducklake:lake/eth_catalog.duckdb"
+          alias: eth_lake
+      database: eth_lake
       schema: main
-      threads: 4
+      threads: 1
